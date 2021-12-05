@@ -38,7 +38,7 @@ export default class Welome extends React.Component {
               Получить приглашение на iOS Epsilon beta
             </a>
             <a
-              href="/app-release.apk"
+              href="https://hackathon-2021.ddns.net/media/app-release.apk"
               className="button"
               style={{ marginLeft: 10, marginRight: 10 }}
             >
