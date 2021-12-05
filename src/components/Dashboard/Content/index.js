@@ -186,7 +186,15 @@ export default class Content extends React.Component {
                 className={this.state.select == 2 ? 'active' : 'n'}
                 onClick={() => this.setState({ select: 2 })}
               >
-                уязвимости
+                Уязвимости
+              </a>
+            </li>
+            <li>
+              <a
+                className={this.state.select == 4 ? 'active' : 'n'}
+                onClick={() => this.setState({ select: 4 })}
+              >
+                Нагрузочные тесты
               </a>
             </li>
             <li>
@@ -194,7 +202,7 @@ export default class Content extends React.Component {
                 className={this.state.select == 3 ? 'active' : 'n'}
                 onClick={() => this.setState({ select: 3 })}
               >
-                битые ссылки
+                Битые ссылки
               </a>
             </li>
           </ul>
@@ -399,6 +407,108 @@ export default class Content extends React.Component {
                   </tr>
                 ))}
               </table>
+            </div>
+          </div>
+        ) : this.state.select == 4 ? (
+          <div>
+            {' '}
+            <div
+              style={{
+                paddingLeft: 18,
+                paddingTop: 30,
+                fontWeight: 500,
+                paddingBottom: 20,
+              }}
+            >
+              <p>Данные</p>
+            </div>
+            <div className="row-5">
+              <div className="item">
+                <h2>Среднее кол-во запросов в секундуу</h2>
+                <p
+                  style={{
+                    color:
+                      this.state.data.ab_tests[0].requests_per_second < 26
+                        ? 'green'
+                        : 'red',
+                  }}
+                >
+                  {this.state.data.ab_tests[0].requests_per_second}
+                </p>
+              </div>
+              <div className="item">
+                <h2>Конкурентные потоки</h2>
+                <p>{this.state.data.ab_tests[0].concurrency_level}</p>
+              </div>
+              <div className="item">
+                <h2>Кол-во направленные запросов</h2>
+                <p>{this.state.data.ab_tests[0].complete_requests}</p>
+              </div>
+              <div className="item">
+                <h2>Общее время выполнения</h2>
+                <p>{this.state.data.ab_tests[0].time_taken}</p>
+              </div>
+              <div className="item">
+                <h2>Провальные запросы</h2>
+                <p>{this.state.data.ab_tests[0].failed_requests}</p>
+              </div>
+              <div className="item">
+                <h2>Загружено байтов</h2>
+                <p>{this.state.data.ab_tests[0].total_transferred}</p>
+              </div>
+              <div className="item">
+                <h2>Загружено байтов HTML</h2>
+                <p>{this.state.data.ab_tests[0].html_transferred}</p>
+              </div>
+
+              <div className="item">
+                <h2>Среднее время выполнения запроса [ms]</h2>
+                <p>{this.state.data.ab_tests[0].time_per_request}</p>
+              </div>
+              <div className="item">
+                <h2>Среднее время выполнения запроса по всем потокам [ms]</h2>
+                <p>{this.state.data.ab_tests[0].time_per_request_2}</p>
+              </div>
+              <div className="item">
+                <h2>Скорость загрузки [килобайт/сек]</h2>
+                <p>{this.state.data.ab_tests[0].transfer_rate}</p>
+              </div>
+              <div className="item">
+                <h2>Время коннекта (мин.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].connection_time_min}</p>
+              </div>
+              <div className="item">
+                <h2>Время коннекта (макс.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].connection_time_max}</p>
+              </div>
+              <div className="item">
+                <h2>сВремя коннекта (сред.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].connection_time_avg}</p>
+              </div>
+              <div className="item">
+                <h2>Время обработки (мин.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].processing_time_min}</p>
+              </div>
+              <div className="item">
+                <h2>Время обработки (макс.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].processing_time_max}</p>
+              </div>
+              <div className="item">
+                <h2>Время обработки (сред.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].processing_time_avg}</p>
+              </div>
+              <div className="item">
+                <h2>Время ожидания (мин.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].waiting_time_min}</p>
+              </div>
+              <div className="item">
+                <h2>Время ожидания (сред.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].waiting_time_avg}</p>
+              </div>
+              <div className="item">
+                <h2>Время ожидания (мин.) [ms]</h2>
+                <p>{this.state.data.ab_tests[0].total_time_min}</p>
+              </div>
             </div>
           </div>
         ) : null}
