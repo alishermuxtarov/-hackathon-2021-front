@@ -2229,3 +2229,14 @@ textarea::placeholder {
   flex: 1;
   margin-left: 230px;
 }
+
+@media screen and (min-width: 1360px) {
+  .content_main {
+    margin-right: 250px;
+    margin-left: 0px;
+  }
+  .info {
+    margin-right: -250px;
+    margin-left: -0px;
+  }
+}
