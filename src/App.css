@@ -2087,7 +2087,7 @@ textarea::placeholder {
 }
 
 .content_main .item {
-  box-shadow: 1px 1px 3px 1px #eaeaea;
+  box-shadow: 0px 0px 3px 1px #eaeaea;
   border-radius: 4px;
   background: #f6f5f399;
   margin-top: 10px;
@@ -2145,7 +2145,7 @@ textarea::placeholder {
   width: 400px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   margin-right: 40px;
 }
 
