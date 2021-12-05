@@ -70,7 +70,7 @@ export default class TestContent extends React.Component {
               </div>
               <div className="info_item">
                 <p>
-                  <b>Time for teken test </b>
+                  <b>Time for taken test </b>
                 </p>
                 <p>2.234s</p>
               </div>

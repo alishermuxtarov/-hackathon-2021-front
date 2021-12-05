@@ -251,7 +251,27 @@ export default class Content extends React.Component {
               </div>
               <div className="item">
                 <h2>скорость загрузки</h2>
-                <p>{this.state.data.loading_speed * 1000} ms</p>
+                <p
+                  style={{
+                    marginBottom: 10,
+                    paddingLeft: 10,
+                    paddingBottom: 2,
+                    paddingTop: 2,
+                    paddingRight: 10,
+                    display: 'block',
+
+                    borderRadius: 10,
+
+                    background:
+                      this.state.data.loading_speed * 1000 < 2000
+                        ? '#5DDE5E'
+                        : '#FD6360',
+                    color: 'white',
+                  }}
+                >
+                  {' '}
+                  {this.state.data.loading_speed * 1000} ms
+                </p>
               </div>
               <div className="item">
                 <h2>версия ОС</h2>
@@ -263,27 +283,51 @@ export default class Content extends React.Component {
               </div>
               <div className="item">
                 <h2>предупреждение php</h2>
-                <p>{this.state.data.php_warning}</p>
+                <p>
+                  {this.state.data.php_warning == null
+                    ? 'Нет'
+                    : this.state.data.php_warning}
+                </p>
               </div>
               <div className="item">
                 <h2>версия веб-сервера</h2>
-                <p>{this.state.data.web_server_version}</p>
+                <p>
+                  {this.state.data.web_server_version == null
+                    ? 'Нет'
+                    : this.state.data.web_server_version}
+                </p>
               </div>
               <div className="item">
                 <h2>предупреждение веб-сервера</h2>
-                <p>{this.state.data.web_server_warning}</p>
+                <p>
+                  {this.state.data.web_server_warning == null
+                    ? 'Нет'
+                    : this.state.data.web_server_warning}
+                </p>
               </div>
               <div className="item">
                 <h2>имя фреймворка</h2>
-                <p>{this.state.data.framework_name}</p>
+                <p>
+                  {this.state.data.framework_name == null
+                    ? 'Нет'
+                    : this.state.data.framework_name}
+                </p>
               </div>
               <div className="item">
                 <h2>предупреждение о фреймворке</h2>
-                <p>{this.state.data.framework_warning}</p>
+                <p>
+                  {this.state.data.framework_warning == null
+                    ? 'Нет'
+                    : this.state.data.framework_warning}
+                </p>
               </div>
               <div className="item">
                 <h2>количество битых ссылок</h2>
-                <p>{this.state.data.broken_links_count}</p>
+                <p>
+                  {this.state.data.broken_links_count == null
+                    ? 'Нет'
+                    : this.state.data.broken_links_count}
+                </p>
               </div>
             </div>
             <div

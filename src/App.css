@@ -2082,7 +2082,7 @@ textarea::placeholder {
   background: #f6f5f399;
   margin-top: 10px;
   width: 32%;
-  height: 90px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2112,7 +2112,7 @@ textarea::placeholder {
 .row-4 .item {
   width: 23%;
   margin-right: 20px;
-  height: 70px;
+  height: 90px;
 }
 
 .row-4 .item {
@@ -2124,13 +2124,13 @@ textarea::placeholder {
 }
 
 .row-4 .item h2 {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .row-4 .item p {
   color: black;
-  opacity: 1;
+  opacity: 0.8;
   font-size: 14px;
 }
 
