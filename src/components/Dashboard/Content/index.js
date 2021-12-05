@@ -424,7 +424,7 @@ export default class Content extends React.Component {
             </div>
             <div className="row-5">
               <div className="item">
-                <h2>Среднее кол-во запросов в секундуу</h2>
+                <h2>Среднее кол-во запросов в секунду</h2>
                 <p
                   style={{
                     color:
